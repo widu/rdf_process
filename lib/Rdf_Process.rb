@@ -1,5 +1,13 @@
-load "../rdf_inference/rdf_inference.rb"
-load "../rdf_process/RdfProcessDefinitionLike.rb"
+# load "../rdf_inference/rdf_inference.rb"
+require 'linkeddata'
+require 'rdf_to_graphviz'
+require 'rdf_rules_engine'
+require 'xls_to_rdf'
+
+require 'rdf_inference'
+# load "../rdf_process/lib/rdf_process/RdfProcessDefinitionLike.rb"
+
+require 'rdf_process/RdfProcessDefinitionLike'
 
 class RdfProcess
 	include RdfProcessDefinitionLike
