@@ -221,6 +221,10 @@ module RdfProcessDefinitionLike
 				puts step.parameters[:output_vrbl]
 				puts @runtime_variable_list[step.parameters[:output_vrbl]][:value].inspect
 			}
+		elsif type == "RdfToFile" then       # RdfToFile step definition__________________________________________________________________
+			runtime_code = -> {
+				File.write(@runtime_variable_list[step.parameters[:output_file_vrbl]][:value], @runtime_variable_list[step.parameters[:input_vrbl]][:value].to_csv)
+			}
 		end
 		step.parameters[:runtime_code] = runtime_code
 		puts step.parameters
