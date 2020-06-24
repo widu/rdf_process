@@ -1,10 +1,10 @@
 
 Gem::Specification.new do |s|
 	s.name = 'rdf_process'
-	s.version = '0.0.0'
-	s.date = '2018-01-02'
+	s.version = '0.0.1'
+	s.date = '2019-01-27'
 	s.summary = "Process engine"
-	s.description = "Process engine"
+	s.description = "Process engine. Add RdfToFile task"
 	s.authors = ["WiDu"]
 	s.email = 'wdulek@gmail.com'
 	s.files = ["lib/rdf_process.rb", "lib/rdf_process/RdfProcessDefinitionLike.rb"]
