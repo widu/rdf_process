@@ -1,0 +1,11 @@
+require 'rdf_process'
+
+
+proc = RdfProcess.new
+proc.eval_file(ARGV[0])
+if ARGV[1] != nil and ARGV[2] != nil  then
+    puts ARGV[1], ARGV[2] 
+    proc.set_runtime_variable(ARGV[1], ARGV[2])
+end
+proc.processing
+puts "koniec"
