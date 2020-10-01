@@ -24,9 +24,18 @@ addStep "Filtr" do
 	depends_on  "step1"
 end
 
-#Step3
-addStep "RdfToGraphviz" do
+#step3
+addStep "RdfToTurtleFile" do
 	step_id "step3"
+	name "Save to turtle file"
+	input_vrbl "res3"
+	output_file_vrbl  "output2", "output_file.ttl"
+	depends_on  "step2"
+end
+
+#Step4
+addStep "RdfToGraphviz" do
+	step_id "step4"
 	name "Generating graphviz image"
 	input_vrbl "res3"
 	output_file_vrbl  "output1", "res_graph1.png"

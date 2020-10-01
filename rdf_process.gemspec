@@ -1,11 +1,11 @@
 
 Gem::Specification.new do |s|
 	s.name = 'rdf_process'
-	s.version = '0.0.2'
-	s.date = '2020-06-27'
+	s.version = '0.0.3'
+	s.date = '2020-10-01'
 	s.executables << 'rdf_process'
 	s.summary = "Process engine"
-	s.description = "Process engine. CLI"
+	s.description = "Process engine. New step: RdfToTurtleFile"
 	s.authors = ["WiDu"]
 	s.email = 'wdulek@gmail.com'
 	s.files = ["lib/rdf_process.rb", "lib/rdf_process/RdfProcessDefinitionLike.rb"]

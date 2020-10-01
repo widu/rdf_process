@@ -225,6 +225,12 @@ module RdfProcessDefinitionLike
 			runtime_code = -> {
 				File.write(@runtime_variable_list[step.parameters[:output_file_vrbl]][:value], @runtime_variable_list[step.parameters[:input_vrbl]][:value].to_csv)
 			}
+		elsif type == "RdfToTurtleFile" then  #RdfToTurtleFile step definition
+			runtime_code = -> {
+				RDF::Turtle::Writer.open(@runtime_variable_list[step.parameters[:output_file_vrbl]][:value]) do |writer|
+					writer << @runtime_variable_list[step.parameters[:input_vrbl]][:value]
+				end
+			}	
 		end
 		step.parameters[:runtime_code] = runtime_code
 		puts step.parameters

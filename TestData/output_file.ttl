@@ -1,0 +1,37 @@
+
+ [
+    a <http://vieslav.pl/process/0.1/Process>;
+    <http://vieslav.pl/process/0.1/firstStep> [
+      a <http://vieslav.pl/process/0.1/ConverterXlsToRdf>,
+        <http://vieslav.pl/process/0.1/Step>;
+      <http://vieslav.pl/process/0.1/description> "Loading data from excel";
+      <http://vieslav.pl/process/0.1/input_file> [
+        a <http://vieslav.pl/process/0.1/InputFile>,
+          <http://vieslav.pl/process/0.1/RuntimeVariable>;
+        <http://vieslav.pl/process/0.1/name> "excel1";
+        <http://vieslav.pl/process/0.1/value> "/interfaces/zleznosci3.xlsx"
+      ];
+      <http://vieslav.pl/process/0.1/name> "Step 1";
+      <http://vieslav.pl/process/0.1/output> [
+        a <http://vieslav.pl/process/0.1/Graph>,
+          <http://vieslav.pl/process/0.1/RuntimeVariable>;
+        <http://vieslav.pl/process/0.1/name> "graph"
+      ];
+      <http://vieslav.pl/process/0.1/xlsOptionsValue> "{ :sheets => [\"Interfaces\", \"BackLog\"] }"
+    ];
+    <http://vieslav.pl/process/0.1/name> "Demo process";
+    <http://vieslav.pl/process/0.1/prefix> [
+      a <http://vieslav.pl/process/0.1/Prefix>,
+        <http://vieslav.pl/process/0.1/RuntimeVariable>;
+      <http://vieslav.pl/process/0.1/name> "prefix";
+      <http://vieslav.pl/process/0.1/value> """ PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+			PREFIX owl:    <http://www.w3.org/2002/07/owl#> 
+			PREFIX grvz: 	<http://vieslav.pl/grvz#> 
+			PREFIX wd:  	<http://vieslav.pl/RulesToGraphviz#> 
+			PREFIX online:  <http://vieslav.pl/online#> 
+			PREFIX wdc:     <http://vieslav.pl/csv/0.1/>
+			PREFIX wdp:    <http://vieslav.pl/process/0.1/> . 
+  """
+    ]
+  ] .
